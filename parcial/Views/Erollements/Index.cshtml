@@ -1,0 +1,54 @@
+﻿@model IEnumerable<parcial.Models.Erollements>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+
+        <th>
+            @Html.DisplayNameFor(model => model.Courses.Title)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Students.FirstMidName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Students.LastName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Grade)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+<tr>
+
+    <td>
+        @Html.DisplayFor(modelItem => item.Courses.Title)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.Students.FirstMidName)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.Students.LastName)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.Grade)
+    </td>
+    <td>
+        @Html.ActionLink("Edit", "Edit", new { id = item.ErollementID }) |
+        @Html.ActionLink("Details", "Details", new { id = item.ErollementID }) |
+        @Html.ActionLink("Delete", "Delete", new { id = item.ErollementID })
+    </td>
+</tr>
+}
+
+</table>

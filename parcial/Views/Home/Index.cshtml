@@ -1,0 +1,17 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+<style>
+  
+</style>
+<div class="jumbotron">
+    <h1>Estudiantes</h1>
+    <div class="container">
+        <div class="row">
+            <div class='col-4'><a href="@Url.Action("Index","Students")" class="btn btn-primary btn-lg">Estudiantes</a></div>
+            <div class='col-4'><a href="@Url.Action("Index","Erollements")" class="btn btn-primary btn-lg">Estudiantes y cursos</a></div>
+            <div class='col-4'><a href="@Url.Action("Index","Courses")" class="btn btn-primary btn-lg">Cursos</a></div>
+        </div>
+    </div>
+</div>
+
